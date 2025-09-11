@@ -45,12 +45,12 @@ export default function StatStyledInput({
 const nameToLabel = (name: InputName) => {
   switch (name) {
     case "health":
-      return "Current Hit Points";
+      return "当前生命值";
     case "maxHealth":
-      return "Hit Points Maximum";
+      return "生命值上限";
     case "tempHealth":
-      return "Temporary Hit Points";
+      return "临时生命值";
     case "armorClass":
-      return "Armor Class";
+      return "护甲等级";
   }
 };
