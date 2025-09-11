@@ -45,26 +45,26 @@ export default function Settings(): JSX.Element {
         <ScrollArea className="h-full 2xs:px-3 xs:px-4" type="scroll">
           <div className="flex flex-wrap items-center justify-between gap-2 pt-4">
             <div>
-              <h1 className="text-2xl font-light">Settings</h1>
+              <h1 className="text-2xl font-light">设置</h1>
               <p className="text-xs text-mirage-400">
-                <i>Stat Bubbles for D&D</i>
+                <i>D&D 属性气泡</i>
               </p>
             </div>
             <div className="flex gap-2 pr-0.5">
               <LinkButton
-                name="Patreon"
+                name="赞助 Patreon"
                 size="large"
                 icon={<Patreon />}
                 href={"https://www.patreon.com/SeamusFinlayson"}
               />
               <LinkButton
-                name="Change Log"
+                name="更新日志"
                 size="large"
                 icon={<History />}
                 href={"https://www.patreon.com/collection/306916?view=expanded"}
               />
               <LinkButton
-                name="Instructions"
+                name="使用说明"
                 size="large"
                 icon={<QuestionMark />}
                 href={
@@ -72,7 +72,7 @@ export default function Settings(): JSX.Element {
                 }
               />
               <LinkButton
-                name="Report Bug"
+                name="反馈问题"
                 size="large"
                 icon={<Bug />}
                 href="https://discord.gg/WMp9bky4be"
@@ -82,9 +82,9 @@ export default function Settings(): JSX.Element {
 
           <Tabs defaultValue="room" className="w-full py-4">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="room">Room</TabsTrigger>
+              <TabsTrigger value="room">房间</TabsTrigger>
               <TabsTrigger value="scene">
-                {"Scene" +
+                {"场景" +
                   (sceneOverridesCount === 0
                     ? ""
                     : ` (${sceneOverridesCount})`)}
