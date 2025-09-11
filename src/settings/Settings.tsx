@@ -317,8 +317,8 @@ function VerticalOffsetSettings({
   return (
     <SettingsRow
       icon={<MoveVertical />}
-      label="Offset"
-      description="Move stat bubbles up or down"
+      label="偏移量"
+      description="将属性气泡整体上移或下移"
       action={
         <Input
           className="w-20 bg-mirage-50/30 focus:bg-mirage-50/40 dark:bg-mirage-950/40 dark:focus:bg-mirage-950/80"
@@ -365,8 +365,8 @@ function JustificationSettings({
           <AlignVerticalJustifyEnd />
         )
       }
-      label="Justification"
-      description="Snap stat bubbles to the top or bottom of tokens"
+      label="对齐位置"
+      description="将属性气泡吸附到棋子顶部或底部"
       action={
         <Button
           variant={"outline"}
@@ -380,7 +380,7 @@ function JustificationSettings({
             );
           }}
         >
-          {justification.toLowerCase()}
+          {justification === "TOP" ? "顶部" : "底部"}
         </Button>
       }
       last={removeHandler === undefined}
@@ -414,8 +414,8 @@ function ShowHealthBarsSettings({
   return (
     <SettingsRow
       icon={<Drama />}
-      label="Show Health Bars"
-      description="Show dungeon master only health bars, but not the text, to players "
+      label="显示生命条"
+      description="向玩家显示仅供 GM 查看 的生命条（不显示文字）"
       action={
         <Switch
           inputProps={{
@@ -434,8 +434,8 @@ function ShowHealthBarsSettings({
       last={!healthBarsVisible && removeHandler === undefined}
     >
       <SubSettingsRow
-        label="Segments"
-        description="Only show when creatures drop to certain fractions of their health"
+        label="分段显示"
+        description="仅在生命值下降到指定分数时显示"
         action={
           <Input
             className="w-20 bg-mirage-50/30 focus:bg-mirage-50/40 dark:bg-mirage-950/40 dark:focus:bg-mirage-950/80"
@@ -475,8 +475,8 @@ function NameTagSettings({
   return (
     <SettingsRow
       icon={<NameTag />}
-      label="Name Tags"
-      description="Custom name tags that never overlap with stat bubbles"
+      label="名称标签"
+      description="自定义名称标签，与属性气泡永不重叠"
       action={
         <Switch
           inputProps={{
@@ -598,7 +598,7 @@ function RemoveSetting({
           variant={"ghost"}
           onClick={removeHandler}
         >
-          Restore Room Default
+          恢复房间默认值
         </Button>
       </div>
     </div>
