@@ -109,7 +109,7 @@ export default function StatsMenuApp({
             writeNameToSelectedItem(target.value, updateName);
           }}
           inputProps={{
-            placeholder: "Name",
+            placeholder: "名称",
             value: tokenName,
             onChange: (e) => {
               setTokenName(e.target.value);
@@ -167,11 +167,7 @@ export default function StatsMenuApp({
 
       <div className="col-start-3 row-start-1 flex items-center justify-center">
         <div className="size-0">
-          <TextRing
-            topText={"TEMPORARY"}
-            bottomText={"HIT POINTS"}
-            letterSpacing={0.8}
-          />
+          <TextRing topText={"临时"} bottomText={"生命值"} letterSpacing={0.8} />
         </div>
       </div>
       <div className="col-start-3 row-start-1 flex size-full items-center justify-center">
@@ -186,7 +182,7 @@ export default function StatsMenuApp({
 
       <div className="col-start-4 row-start-1 flex items-center justify-center">
         <div className="size-0">
-          <TextRing topText={"ARMOR"} bottomText={"CLASS"} letterSpacing={1} />
+          <TextRing topText={"护甲"} bottomText={"等级"} letterSpacing={1} />
         </div>
       </div>
       <div className="col-start-4 row-start-1 flex size-full items-center justify-center">
@@ -213,12 +209,12 @@ export default function StatsMenuApp({
         {token.hideStats && true ? (
           <div className="inline-flex items-center gap-2 text-primary-800 hover:text-primary-800 dark:text-primary-dark-300 dark:hover:text-primary-dark-300">
             <BookLock />
-            <div>Dungeon Master Only</div>
+            <div>仅 GM 可见</div>
           </div>
         ) : (
           <div className="inline-flex items-center gap-2">
             <BookOpen />
-            <div>Player Editable</div>
+            <div>玩家可编辑</div>
           </div>
         )}
       </Button>
