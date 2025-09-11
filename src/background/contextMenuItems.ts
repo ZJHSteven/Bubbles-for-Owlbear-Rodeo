@@ -29,7 +29,7 @@ function createPlayerMenu(
     icons: [
       {
         icon: menuIcon,
-        label: "Edit Stats",
+        label: "编辑属性",
         filter: {
           every: [
             { key: "type", value: "IMAGE" },
@@ -65,7 +65,7 @@ function createGmMenu(themeMode: "DARK" | "LIGHT", gmMenuHeight: number) {
     icons: [
       {
         icon: menuIcon,
-        label: "Edit Stats",
+        label: "编辑属性",
         filter: {
           every: [
             { key: "type", value: "IMAGE" },
