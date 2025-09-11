@@ -49,15 +49,15 @@ export default function Header({
             }}
           >
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Editor Mode" />
+              <SelectValue placeholder="编辑模式" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Operation</SelectLabel>
-                <SelectItem value="none">None</SelectItem>
-                <SelectItem value="damage">Damage</SelectItem>
-                <SelectItem value="healing">Heal</SelectItem>
-                <SelectItem value="overwrite">Overwrite Multiple</SelectItem>
+                <SelectLabel>操作</SelectLabel>
+                <SelectItem value="none">无</SelectItem>
+                <SelectItem value="damage">伤害</SelectItem>
+                <SelectItem value="healing">治疗</SelectItem>
+                <SelectItem value="overwrite">批量覆盖</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -81,24 +81,24 @@ export default function Header({
       ) : (
         <div className="flex gap-2">
           <LinkButton
-            name="Patreon"
+            name="赞助 Patreon"
             icon={<Patreon />}
             href={"https://www.patreon.com/SeamusFinlayson"}
           />
           <LinkButton
-            name="Change Log"
+            name="更新日志"
             icon={<History />}
             href={"https://www.patreon.com/collection/306916?view=expanded"}
           />
           <LinkButton
-            name="Instructions"
+            name="使用说明"
             icon={<QuestionMark />}
             href={
               "https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo?tab=readme-ov-file#how-it-works"
             }
           />
           <LinkButton
-            name="Report Bug"
+            name="反馈问题"
             icon={<Bug />}
             href="https://discord.gg/WMp9bky4be"
           />
