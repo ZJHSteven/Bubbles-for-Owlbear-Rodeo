@@ -44,7 +44,7 @@ export default function Footer({
       case "damage":
         return (
           <ActionButton
-            label={"Apply Damage"}
+            label={"应用伤害"}
             buttonProps={{
               onClick: () => {
                 applyHealthDiffToItems(
@@ -61,7 +61,7 @@ export default function Footer({
       case "healing":
         return (
           <ActionButton
-            label={"Apply Healing"}
+            label={"应用治疗"}
             buttonProps={{
               onClick: () => {
                 applyHealthDiffToItems(
@@ -78,7 +78,7 @@ export default function Footer({
       case "overwrite":
         return (
           <ActionButton
-            label={"Overwrite"}
+            label={"覆盖"}
             buttonProps={{
               onClick: () => {
                 overwriteStats(
@@ -112,7 +112,7 @@ export default function Footer({
         rollString.indexOf(":") + 1,
         rollString.indexOf(" ="),
       );
-      const titleString = `${roll.playerName} rolled `;
+      const titleString = `${roll.playerName} 掷骰：`;
 
       return (
         <div
@@ -124,7 +124,7 @@ export default function Footer({
               <div className="float-end pr-0.5">GM</div>
             )}
             {roll.visibility === "PRIVATE" && (
-              <div className="float-end pr-0.5">Private</div>
+              <div className="float-end pr-0.5">私密</div>
             )}
             <p className="flex flex-wrap items-center gap-x-1">
               <span className="text-mirage-500 dark:text-mirage-400">
@@ -252,7 +252,7 @@ export default function Footer({
                   hitPointsOverwrite: toValidIntString(e.target.value),
                 }),
               className: "min-w-[90px] w-full h-[36px]",
-              placeholder: "Unchanged",
+              placeholder: "不变",
             }}
           />
           <StatStyledInput
@@ -270,7 +270,7 @@ export default function Footer({
                   maxHitPointsOverwrite: toValidIntString(e.target.value),
                 }),
               className: "min-w-[90px] w-full h-[36px]",
-              placeholder: "Unchanged",
+              placeholder: "不变",
             }}
           />
           <StatStyledInput
@@ -288,7 +288,7 @@ export default function Footer({
                   tempHitPointsOverwrite: toValidIntString(e.target.value),
                 }),
               className: "min-w-[90px] w-full h-[36px]",
-              placeholder: "Unchanged",
+              placeholder: "不变",
             }}
           />
           <StatStyledInput
@@ -314,7 +314,7 @@ export default function Footer({
       <div className="flex flex-wrap gap-2">
         <Popover open={diceMenuOpen} onOpenChange={setDiceMenuOpen}>
           <PopoverTrigger asChild>
-            <Button variant={"outline"}>Roll Log</Button>
+            <Button variant={"outline"}>骰子记录</Button>
           </PopoverTrigger>
           <PopoverContent
             className="w-72 p-0"
@@ -324,7 +324,7 @@ export default function Footer({
             <ScrollArea className="h-full px-4">
               <div className="flex flex-col gap-2 py-3">
                 <button className="absolute size-0" name="root, does nothing" />
-                <h4 className="font-medium">Scene Roll Log</h4>
+                <h4 className="font-medium">场景骰子记录</h4>
                 <Separator />
                 {appState.rolls.length > 0 ? (
                   <div className="flex flex-col justify-start gap-2">
@@ -332,8 +332,7 @@ export default function Footer({
                   </div>
                 ) : (
                   <p className="text-muted-foreground text-sm">
-                    Your last 20 dice rolls, made in this scene, will be
-                    available here.
+                    你在当前场景中最近 20 次掷骰会显示在此处。
                   </p>
                 )}
               </div>
