@@ -31,41 +31,41 @@ const commandFactory = (
   ];
 };
 const gmCommands = new Map<string, CommandType>([
-  commandFactory("r", "Roll", (string: string) => {
+  commandFactory("r", "掷骰", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)}`
-      : "Invalid Roll";
+      ? `掷 ${extractCommandContent(string)}`
+      : "无效的骰式";
   }),
-  commandFactory("gr", "GM Roll", (string: string) => {
+  commandFactory("gr", "GM 掷骰", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)} secretly`
-      : "Invalid Roll";
+      ? `秘密掷 ${extractCommandContent(string)}`
+      : "无效的骰式";
   }),
 
-  commandFactory("d", "Roll Damage", (string: string) => {
+  commandFactory("d", "掷伤害", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)} damage`
-      : "Invalid Roll";
+      ? `掷 ${extractCommandContent(string)} 伤害`
+      : "无效的骰式";
   }),
-  commandFactory("h", "Roll Healing", (string: string) => {
+  commandFactory("h", "掷治疗", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)} healing`
-      : "Invalid Roll";
+      ? `掷 ${extractCommandContent(string)} 治疗`
+      : "无效的骰式";
   }),
   // commandFactory("o", "Overwrite Multiple Token Stats", () => {
   //   return `Switch to overwrite operation`;
   // }),
 ]);
 const playerCommands = new Map<string, CommandType>([
-  commandFactory("r", "Roll", (string: string) => {
+  commandFactory("r", "掷骰", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)}`
-      : "Invalid Roll";
+      ? `掷 ${extractCommandContent(string)}`
+      : "无效的骰式";
   }),
-  commandFactory("pr", "Roll privately", (string: string) => {
+  commandFactory("pr", "私密掷骰", (string: string) => {
     return validRoll(extractCommandContent(string))
-      ? `Roll ${extractCommandContent(string)} privately`
-      : "Invalid Roll";
+      ? `私密掷 ${extractCommandContent(string)}`
+      : "无效的骰式";
   }),
 ]);
 
@@ -314,7 +314,7 @@ export default function Command({
           <Input2
             ref={inputRef}
             id={COMMAND_INPUT_ID}
-            placeholder="Enter a command"
+            placeholder="输入指令"
             value={inputContent}
             spellCheck={false}
             onChange={(e) => {
