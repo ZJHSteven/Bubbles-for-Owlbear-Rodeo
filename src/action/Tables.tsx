@@ -107,20 +107,20 @@ export function SceneTokensTable({
                   }
                 />
               )}
-              <TableHead>Token</TableHead>
+              <TableHead>棋子</TableHead>
               {appState.operation === "none" && playerRole === "GM" && (
-                <TableHead>Access</TableHead>
+                <TableHead>权限</TableHead>
               )}
               {appState.operation !== "damage" && (
-                <TableHead title="Hit Points / Maximum Hit Points, Temporary Hit Points">
-                  Stats
+                <TableHead title="生命值 / 生命值上限，临时生命值">
+                  属性
                 </TableHead>
               )}
               {appState.operation === "damage" && (
                 <>
-                  <TableHead>Multiplier</TableHead>
-                  <TableHead>Damage</TableHead>
-                  <TableHead>New Hit Points</TableHead>
+                  <TableHead>倍率</TableHead>
+                  <TableHead>伤害</TableHead>
+                  <TableHead>新的生命值</TableHead>
                 </>
               )}
             </TableRow>
