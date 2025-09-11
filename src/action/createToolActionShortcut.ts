@@ -10,7 +10,7 @@ export default async function createToolActionShortcut() {
     icons: [
       {
         icon: menuIcon,
-        label: "Open Stat Bubbles for D&D",
+        label: "打开 D&D 属性气泡",
         filter: {
           roles: ["GM"],
           activeTools: [
