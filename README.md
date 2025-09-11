@@ -1,5 +1,7 @@
 # **Stat Bubbles for D&D** Owlbear Rodeo Extension
 
+[中文文档 / Chinese Docs](./README.zh-CN.md)
+
 Track hit points and armor class using this [Owlbear Rodeo](https://www.owlbear.rodeo/) extension.
 
 ![Stat Bubbles GitHub Image](https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo/assets/77430559/6e2bcd42-d59e-4482-8fc9-c514bfd3a1c5)
