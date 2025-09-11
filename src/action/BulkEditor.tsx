@@ -172,13 +172,13 @@ export default function BulkEditor(): JSX.Element {
     if (playerRole === "PLAYER")
       return (
         <div className="flex h-full items-start justify-center p-2 text-mirage-400 dark:text-mirage-600">
-          Token list is GM only.
+          仅 GM 可见棋子列表。
         </div>
       );
     if (selectedTokens.length === 0)
       return (
         <div className="flex h-full items-start justify-center p-2 text-mirage-400 dark:text-mirage-600">
-          The tokens you most recently selected on the map will be visible here.
+          你在地图上最近选择的棋子会显示在这里。
         </div>
       );
 
@@ -242,9 +242,7 @@ function ChangeShowItemsButton({
         })
       }
     >
-      {appState.showItems === "ALL"
-        ? "Show Only Selected Tokens"
-        : "Show All Tokens"}
+      {appState.showItems === "ALL" ? "仅显示已选择棋子" : "显示所有棋子"}
     </Button>
   );
 }
