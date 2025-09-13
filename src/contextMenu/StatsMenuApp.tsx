@@ -82,22 +82,28 @@ export default function StatsMenuApp({
     initialNameTagsEnabled,
   );
 
-  useEffect(() =>
-    OBR.scene.onMetadataChange(async (sceneMetadata) => {
+  // 修复订阅泄漏：
+  // 1) 传入空依赖数组，保证副作用仅在首次挂载时执行；
+  // 2) 返回取消订阅函数，确保组件卸载或场景切换时释放监听，避免重复回调导致的重复渲染与性能劣化。
+  useEffect(() => {
+    const unsubscribe = OBR.scene.onMetadataChange(async (sceneMetadata) => {
       const nameTagsEnabled = (
         await getGlobalSettings(undefined, sceneMetadata, undefined)
       ).settings.nameTags;
       setNameTagsEnabled(nameTagsEnabled);
-    }),
-  );
-  useEffect(() =>
-    OBR.room.onMetadataChange(async (roomMetadata) => {
+    });
+    return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = OBR.room.onMetadataChange(async (roomMetadata) => {
       const nameTagsEnabled = (
         await getGlobalSettings(undefined, undefined, roomMetadata)
       ).settings.nameTags;
       setNameTagsEnabled(nameTagsEnabled);
-    }),
-  );
+    });
+    return unsubscribe;
+  }, []);
 
   const NameField: JSX.Element = (
     <div className="grid grid-cols-[1fr,auto,1fr] place-items-center">
