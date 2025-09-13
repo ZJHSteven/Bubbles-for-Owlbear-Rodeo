@@ -8,7 +8,12 @@
 
 ## 安装
 
-从 [Owlbear Rodeo 商店](https://extensions.owlbear.rodeo/bubble-tracker) 安装本扩展。
+推荐使用“从 URL 安装”的方式添加本汉化扩展：
+
+- 复制清单链接：`https://bubbles-for-owlbear-rodeo.pages.dev/manifest.json`
+- 在 OBR 中打开 Extensions → Install from URL，粘贴上述链接并确认。
+
+提示：如你已从上游商店安装了英文版，请先卸载后再按以上步骤安装本汉化版本，以避免混淆。
 
 ## 工作原理
 
