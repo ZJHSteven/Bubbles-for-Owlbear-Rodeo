@@ -1,14 +1,14 @@
 {
-  "name": "D&D 属性气泡",
+  "name": "D&D 状态气泡",
   "version": "1.9.13",
   "manifest_version": 2,
-  "author": "Seamus Finlayson",
-  "homepage_url": "https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo",
+  "author": "ZJHSteven",
+  "homepage_url": "https://github.com/ZJHSteven/Bubbles-for-Owlbear-Rodeo",
   "icon": "/logo.png",
   "background_url": "/src/background/background.html",
   "description": "为 D&D 冒险提供生命条与护甲等级！",
   "action": {
-    "title": "D&D 属性气泡",
+    "title": "D&D 状态气泡",
     "icon": "/status.svg",
     "popover": "/src/action/action.html",
     "height": 522,
