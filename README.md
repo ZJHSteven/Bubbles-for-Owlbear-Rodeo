@@ -1,6 +1,6 @@
 # Stat Bubbles for D&D（Owlbear Rodeo 扩展）
 
-> 汉化声明：本仓库为上游插件 “Stat Bubbles for D&D” 的简体中文本地化版本，仅对界面文案与文档进行汉化，不修改功能与逻辑。原项目与作者：Seamus Finlayson（上游仓库：https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo）。如需英文文档、提交 Issue 或功能请求，请前往上游仓库。
+> 汉化声明：本仓库为上游插件 “Stat Bubbles for D&D” 的简体中文本地化版本，仅对界面文案与文档进行汉化，不修改功能与逻辑。原项目与作者：Seamus Finlayson（上游仓库：[https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo](https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo)）。如需英文文档、提交 Issue 或功能请求，请前往上游仓库。
 
 使用此 [Owlbear Rodeo](https://www.owlbear.rodeo/) 扩展在桌面上追踪并显示 D&D 的属性：生命值（当前/上限/临时）与护甲等级（AC）。
 
