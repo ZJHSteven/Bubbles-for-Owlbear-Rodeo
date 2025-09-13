@@ -16,8 +16,15 @@
   - 查看远端：`git remote -v`
   - 同步上游默认分支：`git fetch upstream && git checkout master && git merge upstream/master`
   - 推送到自己仓库：`git push origin master`（或推送你自己的特性分支）。
-  - 通过 GitHub 发起 PR：从 `origin/<branch>` 向 `upstream/master` 提 PR。
+- 通过 GitHub 发起 PR：从 `origin/<branch>` 向 `upstream/master` 提 PR。
 - 若本地是直接克隆上游，可用 `gh repo fork --remote` 一键创建 fork 并自动重定向 `origin` 与添加 `upstream`。
+
+## 分支策略（新增）
+- 线上 Pages 监听 `master`，为保证稳定性：
+  - 所有改动一律在 `dev` 分支进行；严禁直接推送 `master`。
+  - 当 `dev` 验证通过（构建、基本功能、性能对比）后，再合并到 `master` 触发部署。
+  - 提交规范依旧遵循 Conventional Commits。
+  - PR 描述需包含：改动范围、性能指标对比（首帧/TTI）、Network 瀑布图或关键日志。
 
 ## 构建、开发与本地运行
 - Node 版本：`>= 20`（项目 `package.json` 的 `engines.node` 指定 `^20.11.0`）。
@@ -58,6 +65,8 @@
 - 远端已规范化：`origin` → 你的 fork；`upstream` → 上游仓库。
 - 已安装依赖并完成构建验证：`pnpm install`、`pnpm build` 成功。
 - 若锁文件更新，请执行：`git add pnpm-lock.yaml && git commit -m "chore(deps): 更新锁文件"` 并 `git push`。
+
+- 2025-09-13：新增 `dev` 开发分支；添加文档 `docs/context-menu-lag.md`，记录右键菜单“编辑属性”首帧延迟与渲染缺失的成因与修复建议；约定后续修复均在 `dev` 推进，验证通过后再合并 `master`。
 - 2025-09-13：
   - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
   - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
