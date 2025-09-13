@@ -1,13 +1,13 @@
 ---
-title: Stat Bubbles for D&D
-description: Health Bars and Armor Class for your D&D adventures!
-author: Seamus Finlayson
-image: https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo/assets/77430559/6e2bcd42-d59e-4482-8fc9-c514bfd3a1c5
-icon: https://owlbear-rodeo-bubbles-extension.onrender.com/logo.png
+title: D&D 状态气泡
+description: 为 D&D 冒险提供生命条与护甲等级！
+author: ZJHSteven
+image: https://bubbles-for-owlbear-rodeo.pages.dev/logo.png
+icon: https://bubbles-for-owlbear-rodeo.pages.dev/logo.png
 tags:
   - combat
-manifest: https://owlbear-rodeo-bubbles-extension.onrender.com/manifest.json
-learn-more: https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo
+manifest: https://bubbles-for-owlbear-rodeo.pages.dev/manifest.json
+learn-more: https://github.com/ZJHSteven/Bubbles-for-Owlbear-Rodeo
 ---
 
 # Stat Bubbles for D&D（扩展商店页面文案）
