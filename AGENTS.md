@@ -58,9 +58,13 @@
 - 远端已规范化：`origin` → 你的 fork；`upstream` → 上游仓库。
 - 已安装依赖并完成构建验证：`pnpm install`、`pnpm build` 成功。
 - 若锁文件更新，请执行：`git add pnpm-lock.yaml && git commit -m "chore(deps): 更新锁文件"` 并 `git push`。
+ - 2025-09-13：
+   - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
+   - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
+   - 翻译 `docs/store.md`：保留 Front Matter 不变，仅翻译正文并添加汉化声明。
 
 ## i18n（简体中文汉化）
 - 已将前端所有用户可见文案替换为简体中文，包括：设置页、动作面板、批量编辑、右键菜单、掷骰命令提示、HTML 标题、manifest 名称与描述等。
 - 采用“直接替换静态文案”的最简方案，避免过度抽象；如后续需要多语言切换，可在 `src/` 引入极简 `i18n` 映射，并逐步用 `t('key')` 过渡。
-- 文档：新增 `README.zh-CN.md` 并在 `README.md` 顶部添加跳转链接。
+- 文档：统一以中文 `README.md` 提供说明；不再维护 `README.zh-CN.md`，确保单一来源。
 - 提交规范：已按 Conventional Commits 拆分多次提交，便于 Review。
