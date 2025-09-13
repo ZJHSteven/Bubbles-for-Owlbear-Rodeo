@@ -10,83 +10,85 @@ manifest: https://owlbear-rodeo-bubbles-extension.onrender.com/manifest.json
 learn-more: https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo
 ---
 
-# Stat Bubbles for D&D
+# Stat Bubbles for D&D（扩展商店页面文案）
 
-_Health Bars and Armor Class for your D&D adventures!_
+> 汉化声明：本文件为扩展商店展示页面的中文文案。内容基于上游仓库的英文原文翻译，仅做本地化，不改变文件头部 Front Matter。上游项目：https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo
 
-## How it works
+_为你的 D&D 冒险提供生命条与护甲等级展示！_
 
-This extension provides a simple way to track:
+## 工作原理（How it works）
 
-- Current Hit Points
-- Hit Point Maximum
-- Temporary Hit Points
-- and Armor Class
+此扩展可便捷地追踪：
 
-Stat Bubbles also features:
+- 当前生命值（Current HP）
+- 生命值上限（Hit Point Maximum）
+- 临时生命值（Temporary HP）
+- 护甲等级（Armor Class, AC）
 
-- A per token setting to hide stats from players
-- Name tags that will never overlap with health bars
-- A tools for applying area of effect (AEO) spells
-- Settings to configure health bar positions
-- An option to show the players segmented enemy health bars
+其他特性：
 
-### The Basics
+- 针对单个棋子的“对玩家隐藏属性”开关
+- 永不与生命条重叠的名称标签
+- 应用范围效果（AOE）法术的便捷工具
+- 配置生命条位置的设置项
+- 可选向玩家展示“分段式敌人生命条”
 
-**Right click** on a token to access the **context menu** and edit its stats.
+### 基础（The Basics）
+
+在棋子上点击**右键**打开**上下文菜单**，即可编辑属性。
 
 <img name="Player Context Menu" src="https://github.com/user-attachments/assets/476d0377-19ff-4f3c-a50f-df62c38adaa7" width=300>
 
-**This extension does math for you!** The inline math feature makes repetitive calculations effortless. To add 6 to your HP type +6 and press Enter. To subtract 6 from your HP type -6 and press Enter. This works for every stat.
+**行内运算更省心！** 在输入框中键入 `+6` 回车即可为 HP 加 6；输入 `-6` 回车即可减 6。对所有属性均适用。
 
 <img name="Inline Math Demo" src="https://github.com/user-attachments/assets/440423a0-3ee7-4f2e-9a36-c65da92b354e" width=600>
 
-In a hurry? press **Tab** to cycle through the bubbles.
+赶时间？按 **Tab** 在各个气泡输入框间循环切换。
 
-This extension works with tokens on the **Prop**, **Mount**, and **Character** layers.
+扩展支持 **Prop**、**Mount**、**Character** 三个图层上的棋子。
 
-The health bar is **created automatically** if a number greater than 0 is in the max health field. The temporary HP and armor class bubbles work the same way.
+当“生命值上限”大于 0 时会**自动创建**生命条；临时 HP 与 AC 气泡同理。
 
-### Game / Dungeon Masters
+### 游戏主持人（GM / DM）
 
-The GM gets access to more configuration options.
+GM 可使用更多配置选项。
 
-By clicking the button at the bottom of the context menu the GM can lock their players out of viewing tokens' stats.
+在上下文菜单底部点击按钮，GM 可禁止玩家查看棋子的属性。
 
 <img name="GM Context Menu" src="https://github.com/user-attachments/assets/fbdc127d-41cc-4023-90fd-575909ad5569" width=300>
 
-### Action Menu
+### 动作菜单（Action Menu）
 
-The action menu provides access to all of a rooms tokens in one place.
+动作菜单集中展示房间内的所有棋子。
 
-Quickly apply AOE effects or modify multiple tokens using the built in operations.
+可快速应用 AOE 效果，或用内置操作批量修改多个棋子。
 
-Roll dice either publicly or secretly using the command line. Your rolls are stored in the scene roll log. Check out [RPG Dice Roller](https://dice-roller.github.io/documentation/guide/notation/) for details on the supported dice notations.
+通过命令行可以公开或私密地掷骰；掷骰结果会记录在场景掷骰日志中。支持的掷骰语法参见 [RPG Dice Roller](https://dice-roller.github.io/documentation/guide/notation/)。
 
 ![Action Menu](https://github.com/user-attachments/assets/86d39c02-219d-47b6-986d-6f5785e71d07)
 
-### Name tags
+### 名称标签（Name tags）
 
-Name tags can be enabled from the settings menu. Once enabled both players and GMs can set a token's name in the context menu embed. The autofill icon sets the name tag to the token's name property found under the accessibility settings. The name that you give the token will also be displayed in initiative tracking extensions.
+可在设置菜单启用名称标签。启用后，玩家与 GM 均可在上下文菜单中为棋子设置名称。自动填充图标会将标签设为无障碍设置里的棋子名称。设置的名称也会出现在先攻追踪类扩展中。
 
 <img name="Name tag context menu" src="https://github.com/user-attachments/assets/9f349b52-4918-464c-99ff-7db63550e31d" width=300>
 
-### Settings
+### 设置（Settings）
 
-The settings menu allows GMs to customize the extension to better fit their use case. There are room level settings that apply to every scene opened in the current room, and scene level settings which override the room settings and apply no matter what room the scene is being viewed in.
+设置菜单允许 GM 自定义扩展以更贴合自身需求。包含房间级设置（对该房间打开的所有场景生效）与场景级设置（覆盖房间设置，在查看该场景时始终生效）。
 
 ![Settings Menu](https://github.com/user-attachments/assets/a8758eca-e727-4509-933d-456c57210fc9)
 
-### Uninstalling
+### 卸载（Uninstalling）
 
-Refresh your page after uninstalling the extension to clear health bars and stat bubbles from the scene. Token data will **not** be deleted by uninstalling.
+卸载扩展后请刷新页面以清理场景内的生命条与属性气泡。卸载**不会**删除棋子数据。
 
-## Feature Requests
+## 功能请求（Feature Requests）
 
-I may accept feature requests but - as I have limited time and development plans of my own - being a paid member on [Patreon](https://www.patreon.com/SeamusFinlayson) is your best path to getting a feature implemented.
+作者可能会接受功能请求，但由于时间有限且有既定计划，如需提高实现优先级，可考虑成为其 [Patreon](https://www.patreon.com/SeamusFinlayson) 的付费成员。
 
-## Support
+## 支持（Support）
 
-If you need support for this extension you can message me in the [Owlbear Rodeo Discord](https://discord.gg/yWSErB6Qaj) @Seamus or open an issue on [GitHub](https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo).
+如需支持，可在 [Owlbear Rodeo Discord](https://discord.gg/yWSErB6Qaj) 联系 @Seamus，或在 [GitHub](https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo) 提交 Issue。
 
-If you like using this extension consider [supporting me on Patreon](https://www.patreon.com/SeamusFinlayson) where paid members can request features. You can also follow along there as a free member for updates.
+如果你喜欢该扩展，也欢迎在 [Patreon](https://www.patreon.com/SeamusFinlayson) 支持作者；免费关注也可以获得更新。
