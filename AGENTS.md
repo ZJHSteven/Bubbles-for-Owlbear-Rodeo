@@ -70,6 +70,9 @@
 - 2025-09-13：实施“阶段 A”最小修复（不影响 API 行为）：
   - `fix(contextMenu):` 修复 `scene/room.onMetadataChange` 订阅泄漏，添加依赖与清理。
   - `fix(contextMenu):` 在菜单入口引入骨架占位与错误兜底，降低首帧空白与异常抛出。
+- 2025-09-13：新增构建期名称注入：
+  - `feat(build):` 引入 `scripts/manifestNamePlugin.ts`，通过 `VITE_PLUGIN_NAME` 在打包阶段改写 `dist/manifest.json.name`，避免在源码层来回改名。
+  - 文档 `docs/manifest-branch-naming.md` 给出本地与 CI 示例。
 - 2025-09-13：
   - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
   - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
