@@ -67,6 +67,9 @@
 - 若锁文件更新，请执行：`git add pnpm-lock.yaml && git commit -m "chore(deps): 更新锁文件"` 并 `git push`。
 
 - 2025-09-13：新增 `dev` 开发分支；添加文档 `docs/context-menu-lag.md`，记录右键菜单“编辑属性”首帧延迟与渲染缺失的成因与修复建议；约定后续修复均在 `dev` 推进，验证通过后再合并 `master`。
+- 2025-09-13：实施“阶段 A”最小修复（不影响 API 行为）：
+  - `fix(contextMenu):` 修复 `scene/room.onMetadataChange` 订阅泄漏，添加依赖与清理。
+  - `fix(contextMenu):` 在菜单入口引入骨架占位与错误兜底，降低首帧空白与异常抛出。
 - 2025-09-13：
   - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
   - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
