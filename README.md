@@ -1,116 +1,108 @@
-# **Stat Bubbles for D&D** Owlbear Rodeo Extension
+# Stat Bubbles for D&D（Owlbear Rodeo 扩展）
 
-[中文文档 / Chinese Docs](./README.zh-CN.md)
+> 汉化声明：本仓库为上游插件 “Stat Bubbles for D&D” 的简体中文本地化版本，仅对界面文案与文档进行汉化，不修改功能与逻辑。原项目与作者：Seamus Finlayson（上游仓库：https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo）。如需英文文档、提交 Issue 或功能请求，请前往上游仓库。
 
-Track hit points and armor class using this [Owlbear Rodeo](https://www.owlbear.rodeo/) extension.
+使用此 [Owlbear Rodeo](https://www.owlbear.rodeo/) 扩展在桌面上追踪并显示 D&D 的属性：生命值（当前/上限/临时）与护甲等级（AC）。
 
 ![Stat Bubbles GitHub Image](https://github.com/SeamusFinlayson/Bubbles-for-Owlbear-Rodeo/assets/77430559/6e2bcd42-d59e-4482-8fc9-c514bfd3a1c5)
 
-## Installing
+## 安装
 
-Visit the [Owlbear Rodeo store](https://extensions.owlbear.rodeo/bubble-tracker) to install the extension.
+从 [Owlbear Rodeo 商店](https://extensions.owlbear.rodeo/bubble-tracker) 安装本扩展。
 
-## How it works
+## 工作原理
 
-This extension provides a simple way to track:
+此扩展提供一种简单方式来追踪：
 
-- Current Hit Points
-- Hit Point Maximum
-- Temporary Hit Points
-- and Armor Class
+- 当前生命值（HP）
+- 生命值上限（Max HP）
+- 临时生命值（Temp HP）
+- 护甲等级（AC）
 
-Stat Bubbles also features:
+扩展还包括：
 
-- A per token setting to hide stats from players
-- Name tags that will never overlap with health bars
-- A tools for applying area of effect (AEO) spells
-- Settings to configure health bar positions
-- An option to show the players segmented enemy health bars
+- 针对单个棋子的“对玩家隐藏属性”开关
+- 永不与生命条重叠的名称标签
+- 应用范围效果（AOE）法术的快捷工具
+- 可配置生命条的位置与样式
+- 可选向玩家展示“分段式敌人生命条”
 
-### The Basics
+### 基础操作
 
-**Right click** on a token to access the **context menu** and edit its stats.
+在棋子上点击鼠标右键打开“上下文菜单”，即可编辑其属性。
 
 <img name="Player Context Menu" src="https://github.com/user-attachments/assets/476d0377-19ff-4f3c-a50f-df62c38adaa7" width=300>
 
-**This extension does math for you!** The inline math feature makes repetitive calculations effortless. To add 6 to your HP type +6 and press Enter. To subtract 6 from your HP type -6 and press Enter. This works for every stat.
+**扩展支持行内运算（Inline Math）**：重复计算更轻松。在 HP 输入框中输入 `+6` 回车即加 6，输入 `-6` 回车即减 6。该能力适用于每一个属性输入框。
 
 <img name="Inline Math Demo" src="https://github.com/user-attachments/assets/440423a0-3ee7-4f2e-9a36-c65da92b354e" width=600>
 
-In a hurry? press **Tab** to cycle through the bubbles.
+赶时间？按下 **Tab** 可在多个气泡输入框之间循环切换焦点。
 
-This extension works with tokens on the **Prop**, **Mount**, and **Character** layers.
+扩展支持 **Prop**、**Mount**、**Character** 三个图层上的棋子。
 
-The health bar is **created automatically** if a number greater than 0 is in the max health field. The temporary HP and armor class bubbles work the same way.
+当“生命值上限”输入框中存在大于 0 的数值时，将**自动创建**生命条；临时生命值与护甲等级的气泡亦同理。
 
-### Game / Dungeon Masters
+### 游戏主持人（GM / DM）
 
-The GM gets access to more configuration options.
+GM 可使用更多配置选项。
 
-By clicking the button at the bottom of the context menu the GM can lock their players out of viewing tokens' stats.
+点击上下文菜单底部的按钮，GM 可以禁止玩家查看棋子的属性。
 
 <img name="GM Context Menu" src="https://github.com/user-attachments/assets/fbdc127d-41cc-4023-90fd-575909ad5569" width=300>
 
-### Action Menu
+### 动作菜单（Action Menu）
 
-The action menu provides access to all of a rooms tokens in one place.
+动作菜单在同一处集中管理房间内的所有棋子。
 
-Quickly apply AOE effects or modify multiple tokens using the built in operations.
+可快速应用 AOE 效果，或使用内置操作批量修改多个棋子的属性。
 
-Roll dice either publicly or secretly using the command line. Your rolls are stored in the scene roll log. Check out [RPG Dice Roller](https://dice-roller.github.io/documentation/guide/notation/) for details on the supported dice notations.
+你可以通过命令行公开或私密地掷骰；掷骰结果会记录在场景的掷骰日志中。支持的掷骰语法参考 [RPG Dice Roller 文档](https://dice-roller.github.io/documentation/guide/notation/)。
 
 ![Action Menu](https://github.com/user-attachments/assets/86d39c02-219d-47b6-986d-6f5785e71d07)
 
-### Name tags
+### 名称标签（Name Tags）
 
-Name tags can be enabled from the settings menu. Once enabled both players and GMs can set a token's name in the context menu embed. The autofill icon sets the name tag to the token's name property found under the accessibility settings. The name that you give the token will also be displayed in initiative tracking extensions.
+可在设置菜单中启用名称标签。启用后，玩家与 GM 都可以在上下文菜单内为棋子设置名称。自动填充图标会将名称设为“无障碍（Accessibility）设置”中的棋子名称。你为棋子设置的名称也会显示在先攻追踪类扩展中。
 
 <img name="Name tag context menu" src="https://github.com/user-attachments/assets/9f349b52-4918-464c-99ff-7db63550e31d" width=300>
 
-### Settings
+### 设置（Settings）
 
-The settings menu allows GMs to customize the extension to better fit their use case. There are room level settings that apply to every scene opened in the current room, and scene level settings which override the room settings and apply no matter what room the scene is being viewed in.
+设置菜单允许 GM 根据自己的需求自定义扩展行为。包含“房间级（Room）设置”，对当前房间打开的所有场景生效；以及“场景级（Scene）设置”，可覆盖房间设置，并在查看该场景时始终生效。
 
 ![Settings Menu](https://github.com/user-attachments/assets/a8758eca-e727-4509-933d-456c57210fc9)
 
-### Uninstalling
+### 卸载
 
-Refresh your page after uninstalling the extension to clear health bars and stat bubbles from the scene. Token data will **not** be deleted by uninstalling.
+卸载扩展后请刷新页面，以清除场景中的生命条与属性气泡。卸载操作**不会**删除棋子数据。
 
-## Feature Requests
+## 功能请求（Feature Requests）
 
-I may accept feature requests but - as I have limited time and development plans of my own - being a paid member on [Patreon](https://www.patreon.com/SeamusFinlayson) is your best path to getting a feature implemented.
+作者可能会接受功能请求，但由于个人时间有限且有自己的开发计划，如希望更高优先级实现，成为 [Patreon](https://www.patreon.com/SeamusFinlayson) 付费会员是最可行路径。
 
-## Support
+## 支持与反馈（Support）
 
-If you need support for this extension you can message me in the [Owlbear Rodeo Discord](https://discord.gg/yWSErB6Qaj) @Seamus or open an issue on [GitHub](https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo).
+如需支持，可在 [Owlbear Rodeo 官方 Discord](https://discord.gg/yWSErB6Qaj) 联系 @Seamus，或在 [GitHub](https://github.com/SeamusFinlayson/Bubbles-for-Owkbear-Rodeo) 提交 Issue。
 
-If you like using this extension consider [supporting me on Patreon](https://www.patreon.com/SeamusFinlayson) where paid members can request features. You can also follow along there as a free member for updates.
+如果你喜欢本扩展，也欢迎在 [Patreon](https://www.patreon.com/SeamusFinlayson) 支持作者；成为免费关注者也可以获取更新动态。
 
-## Building
+## 构建（Building）
 
-This project uses [pnpm](https://pnpm.io/) as a package manager.
+本项目使用 [pnpm](https://pnpm.io/) 作为包管理器。
 
-To install all the dependencies run:
+- 安装依赖：`pnpm install`
+- 开发调试：`pnpm dev`
+- 生产构建：`pnpm build`
 
-`pnpm install`
-
-To run in a development mode run:
-
-`pnpm dev`
-
-To make a production build run:
-
-`pnpm build`
-
-## License
+## 许可证（License）
 
 GNU GPLv3
 
-## Contributing
+## 贡献与再发布（Contributing）
 
 Copyright (C) 2023 Owlbear Rodeo
 
 Copyright (C) 2023 Seamus Finlayson
 
-Feel free to fork this but if you post it to the store please do not use my extension name or logo. I am unlikely to accept pull requests.
+欢迎 Fork；但如果要将你的版本发布到商店，请不要使用本扩展的名称或 Logo。作者通常不接受 Pull Request。
