@@ -2,9 +2,10 @@ import { resolve } from "path";
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import manifestNamePlugin from "./scripts/manifestNamePlugin";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), manifestNamePlugin()],
   build: {
     rollupOptions: {
       input: {
