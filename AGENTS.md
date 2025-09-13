@@ -58,10 +58,12 @@
 - 远端已规范化：`origin` → 你的 fork；`upstream` → 上游仓库。
 - 已安装依赖并完成构建验证：`pnpm install`、`pnpm build` 成功。
 - 若锁文件更新，请执行：`git add pnpm-lock.yaml && git commit -m "chore(deps): 更新锁文件"` 并 `git push`。
- - 2025-09-13：
-   - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
-   - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
-   - 翻译 `docs/store.md`：保留 Front Matter 不变，仅翻译正文并添加汉化声明。
+- 2025-09-13：
+  - 删除 `README.zh-CN.md`，统一以 `README.md` 提供中文说明。
+  - 重写 `README.md`：添加汉化声明与上游链接，正文为上游 README 全量中文翻译。
+  - 翻译 `docs/store.md`：保留 Front Matter 不变，仅翻译正文并添加汉化声明。
+  - 更新安装方式：README 改为使用 `https://bubbles-for-owlbear-rodeo.pages.dev/manifest.json` 通过 URL 安装。
+  - 更新商店元信息：`docs/store.md` 的 Front Matter 改为中文标题/描述、作者 `ZJHSteven`，`manifest/icon/image/learn-more` 指向 Cloudflare Pages 与本仓库。
 
 ## i18n（简体中文汉化）
 - 已将前端所有用户可见文案替换为简体中文，包括：设置页、动作面板、批量编辑、右键菜单、掷骰命令提示、HTML 标题、manifest 名称与描述等。
