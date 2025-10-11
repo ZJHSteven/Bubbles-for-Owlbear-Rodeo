@@ -357,13 +357,14 @@ function AccessButton({
     <TableCell className="py-0">
       <Tooltip>
         <TooltipTrigger asChild>
+          {/* 无障碍名称：根据当前隐藏状态动态生成，帮助屏幕阅读器用户理解切换动作 */}
           <Button
             variant={"ghost"}
             size={"icon"}
             name={
               token.hideStats
-                ? "Make Stats Visible to Players"
-                : "Hide Stats from players"
+                ? "向玩家显示属性信息"
+                : "对玩家隐藏属性信息"
             }
             onClick={() =>
               handleHiddenUpdate(token.item.id, token.hideStats, setTokens)
@@ -379,7 +380,8 @@ function AccessButton({
           </Button>
         </TooltipTrigger>
         <TooltipContent side="right">
-          {token.hideStats ? "Dungeon Master Only" : "Player Editable"}
+          {/* 提示说明：根据hideStats状态展示“仅地下城主可编辑”或“玩家可编辑”，让初学者快速分辨权限是锁定还是开放 */}
+          {token.hideStats ? "仅地下城主可编辑" : "玩家可编辑"}
         </TooltipContent>
       </Tooltip>
     </TableCell>

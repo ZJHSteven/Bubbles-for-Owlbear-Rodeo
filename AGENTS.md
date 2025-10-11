@@ -79,6 +79,7 @@
   - 翻译 `docs/store.md`：保留 Front Matter 不变，仅翻译正文并添加汉化声明。
   - 更新安装方式：README 改为使用 `https://bubbles-for-owlbear-rodeo.pages.dev/manifest.json` 通过 URL 安装。
   - 更新商店元信息：`docs/store.md` 的 Front Matter 改为中文标题/描述、作者 `ZJHSteven`，`manifest/icon/image/learn-more` 指向 Cloudflare Pages 与本仓库。
+- 2025-10-11：补足权限按钮悬浮提示与场景设置加号按钮的中文翻译，并在代码中增加中文注释，方便新贡献者理解汉化取舍。
 
 ## i18n（简体中文汉化）
 - 已将前端所有用户可见文案替换为简体中文，包括：设置页、动作面板、批量编辑、右键菜单、掷骰命令提示、HTML 标题、manifest 名称与描述等。

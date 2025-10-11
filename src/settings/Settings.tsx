@@ -129,7 +129,8 @@ export default function Settings(): JSX.Element {
               {sceneSettings.initializationDone && (
                 <div className="space-y-4">
                   <div className="text-balance pl-1">
-                    Override the active room's settings for this scene.
+                    {/* 文案说明：提醒用户此处会以场景特定的自定义配置临时覆盖房间默认设置 */}
+                    覆盖当前房间的默认设置，仅对本场景生效。
                   </div>
 
                   {sceneOverridesCount > 0 && (
@@ -219,7 +220,7 @@ export default function Settings(): JSX.Element {
                           );
                         }}
                       >
-                        + Offset
+                        + 偏移量
                       </AddSceneSettingButton>
                       <AddSceneSettingButton
                         visible={sceneSettings.justification === undefined}
@@ -234,7 +235,7 @@ export default function Settings(): JSX.Element {
                           );
                         }}
                       >
-                        + Justification
+                        + 对齐方式
                       </AddSceneSettingButton>
                       <AddSceneSettingButton
                         visible={sceneSettings.healthBarsVisible === undefined}
@@ -255,7 +256,7 @@ export default function Settings(): JSX.Element {
                           );
                         }}
                       >
-                        + Show Health Bars
+                        + 显示生命条
                       </AddSceneSettingButton>
                       <AddSceneSettingButton
                         visible={sceneSettings.nameTags === undefined}
@@ -268,7 +269,7 @@ export default function Settings(): JSX.Element {
                           );
                         }}
                       >
-                        + Name Tags
+                        + 名称标签
                       </AddSceneSettingButton>
                     </div>
                   )}
